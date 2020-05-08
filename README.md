@@ -1,1 +1,0 @@
-# jpgarciaortiz.github.io
