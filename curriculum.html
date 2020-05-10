@@ -1,0 +1,193 @@
+---
+title: Curriculum
+layout: page
+---
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <script type="text/javascript" src="bibtex_js.js"></script>
+    
+    <script type="text/javascript">
+      window.onload = function () {
+        var toc = "";
+        var level = 0;
+
+        document.getElementById("contents").innerHTML =
+            document.getElementById("contents").innerHTML.replace(
+                /<h([\d])>([^<]+)<\/h([\d])>/gi,
+                function (str, openLevel, titleText, closeLevel) {
+                    if (openLevel != closeLevel) {
+                        return str;
+                    }
+
+                    if (openLevel > level) {
+                        toc += (new Array(openLevel - level + 1)).join("<ul>");
+                    } else if (openLevel < level) {
+                        toc += (new Array(level - openLevel + 1)).join("</ul>");
+                    }
+
+                    level = parseInt(openLevel);
+
+                    var anchor = titleText.replace(/ /g, "_");
+                    toc += "<li><a href=\"#" + anchor + "\">" + titleText
+                        + "</a></li>";
+
+                    return "<h" + openLevel + "><a name=\"" + anchor + "\">"
+                        + titleText + "</a></h" + closeLevel + ">";
+                }
+            );
+
+        if (level) {
+            toc += (new Array(level + 1)).join("</ul>");
+        }
+
+        document.getElementById("toc").innerHTML += toc;
+      };
+
+    </script> 
+  </head> 
+  <body>
+
+    <div id="toc">
+      <h2>Table of contents</h2>
+    </div>
+
+    <div class="bibtex_template">
+      <li style="margin: 10px 0">
+        <span class="if BIBTEXTYPEKEY==INPROCEEDINGS || BIBTEXTYPEKEY==ARTICLE">
+          <span class="if author">
+            <span class="author">
+                <span class="first"></span>
+                <span class="last"></span></span>.
+          </span>
+          <a class="url"><span class="title"></span></a>.
+          <span class="if journal">
+            <span class="journal" style="font-style: italic;"></span>.
+          </span>
+          <span class="if booktitle">
+            <span class="booktitle" style="font-style: italic;"></span>.
+          </span>
+          <span class="if mastersthesis">
+            <span class="mastersthesis" style="font-style: italic;"></span>, Masters thesis.
+          </span>
+          <span class="if school">
+            <i>Masters thesis,</i>&nbsp<span class="school"></span>.
+          </span>
+          <span class="if volume" style="font-style: italic;">
+            Vol. <span class="volume"></span>,
+            <span class="if number" style="font-style: italic;">
+                n. <span class="number"></span>,&nbsp</span>
+            <span class="if pages">
+              pp. <span class="pages"></span>.&nbsp
+            </span>
+          </span>
+          <span class="if edition">
+            <span class="edition"></span> ed.,
+          </span>
+          <span class="if publisher">
+            <span class="publisher"></span>.
+          </span>
+          <span class="if year">
+            <span class="year"></span>.
+          </span>
+        </span>
+        <span class="if BIBTEXTYPEKEY==PFC">
+          <span class="alumno"></span>.
+          <span class="descripcion" style="font-style: italic;"></span>.
+          <span class="titulacion"></span>.
+          <span class="directores"></span>.
+          <span class="fecha"></span>.
+        </span>
+        <span class="if BIBTEXTYPEKEY==PROJECT">
+          <a class="url"><span class="title"></span></a>.
+          <div style="margin-left: 30px;">
+            Founding entity: <span class="entity"></span><br>
+            Program: <a class="programurl"><span class="program"></span></a><br>
+            From <span class="start"></span> to <span class="finish"></span><br>
+            Main researchers: <span class="head"></span><br>
+            Budget: <span class="budget"></span><br>
+            Evidence: <a class="evidenceurl"><span class="evidence"></span></a><br>
+          </div>
+        </span>
+        <span class="if BIBTEXTYPEKEY==INBOOK">
+          <span class="if author">
+            <span class="author">
+                <span class="first"></span>
+                <span class="last"></span></span>.
+          </span>
+          <a class="url"><span class="title"></span></a>.
+          <span class="if volume" style="font-style: italic;">
+            Vol. <span class="volume"></span>,
+            <span class="if number" style="font-style: italic;">
+                n. <span class="number"></span>,&nbsp</span>
+            <span class="if chapter">
+              chapter <span class="chapter"></span><span class="if !series">,&nbsp</span>
+              <span class="if series">of <span class="series"></span>,</span>
+            </span>
+            <span class="if pages">
+              pp. <span class="pages"></span>.&nbsp
+            </span>
+          </span>
+          <span class="if edition">
+            <span class="edition"></span> ed.,
+          </span>
+          <span class="if publisher">
+            <span class="publisher"></span>.
+          </span>
+          <span class="if year">
+            <span class="year"></span>.
+          </span>
+          <span class="if note">
+            <span class="note"></span>.
+          </span>
+          <span class="if doi">
+            <a class="doi">DOI</a>
+          </span>
+        </span>
+        <span class="if BIBTEXTYPEKEY==PHDTHESIS">
+          <a class="url"><span class="title"></span></a>.
+          <div style="margin-left: 30px;">
+            Author: <span class="phd_candidate"></span><br>
+            University: <span class="university"></span><br>
+            Faculty: <span class="faculty"></span><br>
+            Qualification: <span class="calification"></span><br>
+            Year: <span class="year"></span>
+          </div>
+        </span>
+      </li>
+    </div>
+
+    <bibtex src="jp.bib"></bibtex>
+    
+    <div id="contents">    
+
+      <h2>Journal papers</h2>
+      <div class="bibtex_display" BIBTEXTYPEKEY="ARTICLE"></div>
+
+      <h2>Conference papers</h2>
+      <div class="bibtex_display" BIBTEXTYPEKEY="INPROCEEDINGS"></div>
+
+      <h2>Book chapters</h2>
+      <div class="bibtex_display" BIBTEXTYPEKEY="INBOOK"></div>
+
+      <h2>Research projects</h2>
+      <div class="bibtex_display" BIBTEXTYPEKEY="PROJECT"></div>
+
+      <h2>Transference projects</h2>
+      <div class="bibtex_display" BIBTEXTYPEKEY="PROJECT"></div>
+
+      <h2>Contracts</h2>
+      <div class="bibtex_display" BIBTEXTYPEKEY="CONTRACT"></div>
+
+      <h2>Phd Thesis</h2>
+      <div class="bibtex_display" BIBTEXTYPEKEY="PHDTHESIS"></div>
+
+      <h2>Final projects</h2>
+      <div class="bibtex_display" BIBTEXTYPEKEY="PFC"></div>
+
+    </div>
+
+  </body>
+</html>

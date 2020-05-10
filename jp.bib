@@ -1,0 +1,987 @@
+
+@article{maturana2019layer,
+  title = {Layer Selection in Progressive Transmission of Motion-Compensated JPEG2000 Video},
+  author = {Maturana-Espinosa, Jos{\'e} Carmelo and Garc{\'i}a-Ortiz, Juan Pablo and M{\"u}ller, Daniel and Gonz{\'a}lez-Ruiz, Vicente},
+  journal = {Electronics},
+  volume = {8},
+  number = {9},
+  pages = {1032},
+  year = {2019},
+  publisher = {Multidisciplinary Digital Publishing Institute},
+  URL = {https://doi.org/10.3390/electronics8091032},
+  IMPACT = {(JCR 2018) 1.764},
+  RANKINGS = {(JCR 2018) ENGINEERING, ELECTRICAL AND ELECTRONIC: 154/266 (Q3)},
+  ISSN = {2079-9292},
+  resumen = {Esta publicación muestra las mejoras introducidas en el algoritmo OPTL (Optimized Progressive Transmission by Layers), presentado junto con FSO (Full Search Optimization) anteriormente en el DCC'18 (Data Compression Conference 2018), ambos diseñados para definir la secuencia de paquetes JPEG2000 a transmitir en entornos con ancho de banda limitado, cuando MCJ2K (Motion Compensated JPEG2000) se ha usado para comprimir las secuencias de imágenes que son servidas por un servidor JPIP (JPEG2000 Interactive Protocol). En concreto, ESLA (Estimated-Slope sub-band Layers Allocation), mejora a OPTL en que ahora ya no es necesario haber usado las ganancias de las subbandas temporales para aumentar su rendimiento rate/distortion. Esto además mejora los tiempos de compresión, así como los ratios de compresión porque se evita la generación de paquetes vacíos en el code-stream, como consecuencia del uso de incrementos de calidad muy pequeños al comienzo de la transmisión. Los resultados experimentales demuestran que ESLA arroja un rendimiento desde el punto de vista rate/distortion muy próximo a FSO (renombrado en este trabajo como OSLA (Optimized Sub-band Layers Allocation).}
+}
+
+@InProceedings{SH19,
+  AUTHOR = 	 {S\'anchez-Hern\'andez, J.J. and
+                 Gonz\'alez-Ruiz, V. and
+		 Garc{\'i}a-Ortiz, J.P. and
+		 M\"uller, D.},
+  TITLE = 	 {Client-driven Transmission of JPEG2000 Image Sequences using Motion Compensated Conditional Replenishment},
+  BOOKTITLE =    {Proceedings of Data Compression Conference (DCC)},
+  YEAR = 	 {2019},
+  editor = 	 {Bilgin, A. and
+                  Marcellin, M.W. and
+		  Serra-Sagrista, J. and
+		  Storer, J.A.},
+  PAGES = 	 {602--602},
+  MONTH = 	 {march},
+  address = 	 {Snowbird, Utah, USA},
+  organization = {U. Arizona, Brandeis U., Microsoft Research, IEEE Signal Processing Society},
+  publisher =    {IEEE Computer Society},
+  URL =          {https://doi.org/10.1109/DCC.2019.00114},
+  ranking =      {\href{http://portal.core.edu.au/conf-ranks/?search=data+compression+conference&by=all&source=CORE2018&sort=atitle&page=1}{CORE(2018)}: A*},
+  ISBN         = {978-1-7281-0657-1},
+  ISSN         = {2375-0359},
+  resumen      = {En este trabajo se presenta y evalúa MCCR (Motion Compensated Conditional Replenishment), un cliente JPIP (JPEG2000 Interactive Protocol) capaz de mejorar las reconstrucciones de las secuencias transmitidas gracias al uso de estimación de movimiento en el lado del cliente (el servidor y sus datos Motion JPEG2000 permanecen inalterables). Un cliente MCCR genera una predicción para cada imagen que se va a solicitar y recibe del servidor una versión de baja resolución de dicha imagen. Ambas imágenes se comparan (la predicción y la predicha) y el cliente, dependiendo del ancho de banda disponible, descarga un número variable de precintos, solicitando primero aquellos que más error de predicción poseen, aprovechando así todos aquellos precintos que se predicen adecuadamente y que no son reclamados al servidor. Los resultados experimentales demuestran mejoras muy significativas en la calidad de las reconstrucciones cuando se comparan con MJ2K (Motion JPEG2000).}
+}
+
+@InProceedings{maturana2018rate,
+  AUTHOR = 	 {Maturana-Espinosa, J.C. and
+                 Gonz\'alez-Ruiz, V. and
+		 Garc{\'i}a-Ortiz, J.P. and
+		 M\"uller, D.},
+  TITLE = 	 {Rate Allocation for Motion Compensated JPEG2000},
+  BOOKTITLE =    {Proceedings of Data Compression Conference (DCC)},
+  YEAR = 	 {2018},
+  editor = 	 {Bilgin, A. and
+                  Marcellin, M.W. and
+		  Serra-Sagrista, J. and
+		  Storer, J.A.},
+  PAGES = 	 {70--79},
+  MONTH = 	 {march},
+  address = 	 {Snowbird, Utah, USA},
+  organization = {U. Arizona, Brandeis U., Microsoft Research, IEEE Signal Processing Society},
+  publisher    = {IEEE Computer Society},
+  URL          = {https://doi.org/10.1109/DCC.2018.00015},
+  ranking      = {\href{http://portal.core.edu.au/conf-ranks/?search=data+compression+conference&by=all&source=CORE2018&sort=atitle&page=1}{CORE(2018)}: A*},
+  ISBN         = {978-1-7281-0657-1},
+  ISSN         = {2375-0359},
+  resumen      = {Se presentan y evalúan tres algoritmos de control del bit-rate en tiempo de descompresión (rate allocation) para el códec de vídeo MCJ2K (Motion Compensated JPEG2000), llamados HPTL (Heuristic Progressive Transmission by Layers), OPTL (Optimized Progressive Transmission by Layers) y FSO (Full Search Optimization). MCJ2K puede ser aplicado a los servidores JPIP (JPEG2000 Interactive Protocol) sin modificarlos. Los algoritmos presentados definen tres formas distintas de transmitir progresivamente (tratando de maximizar la calidad) las secuencias de vídeo MCJ2K. También se analiza el impacto de considerar las ganancias de las diferentes subbandas temporales generadas por MCJ2K. Los experimentos demuestran: (1) que MCJ2K permite mejorar significativamente las tasas de compresión respecto de MJ2K (Motion JPEG2000), (2) que tanto HPTL como OPTL (ambos algoritmos con bajo coste computacional comparados con FSO) mejoran ligeramente la calidad de las reconstrucciones cuando dichas ganancias son consideradas, (3) que el rendimiento de FSO no depende de las ganancias (como se esperaba), y (4) que usando OPTL, MCJ2K es más escalable y arroja un rendimiento comparable a SHVC (Scalable High efficiency Video Coding) en términos rate/distortion, incluso usando un estimador de movimiento mucho más simple.}
+}
+
+@InProceedings{cmljce15,
+  TITLE		= {Ejecutando Peers P2PSP en Google Chromecast},
+  AUTHOR	= {Medina-L\'opez, Cristobal and
+                   Gonz\'alez-Ruiz, Vicente and
+		   Casado, L. G. and
+		   Naranjo, J.A.M. and
+		   Garc\'ia-Ortiz, Juan Pablo},
+  BOOKTITLE	= {Actas VI Jornadas de Computaci\'on Empotrada},
+  PAGES		= {123--129},
+  YEAR		= {2015},
+  address	= {Cordoba},
+  MONTH		= {Septiembre},
+  URL           = {http://www.hpca.ual.es/~cmedina/papers/JCE15.pdf},
+  isbn		= {978-84-16017-54-6}
+}
+
+@Article{SH15,
+  AUTHOR = 	 {S\'anchez-Hern\'andez, J.J. and
+                  Garc{\'i}a-Ortiz, J.P. and
+		  Gonz\'alez-Ruiz, Vicente and
+		  M\"uller, D.},
+  TITLE = 	 {Interactive Streaming of Sequences of High Resolution JPEG2000 Images},
+  JOURNAL = 	 {IEEE Transactions on Multimedia},
+  YEAR = 	 {2015},
+  VOLUME = 	 {17 (issue: 10)},
+  NUMBER = 	 {99},
+  PAGES = 	 {1829-1838},
+  MONTH = 	 {October},
+  URL =          {http://dx.doi.org/10.1109/TMM.2015.2470595},
+  cites =        {\href{https://scholar.google.com/scholar?oi=bibs&hl=en&cites=2719566845123423087}{(2020/01/21) 7}},
+  IMPACT =       {(JCR 2015) 2.303},
+  RANKINGS =     {(JCR 2015) COMPUTER SCIENCE, INFORMATION SYSTEMS: 17/139 (Q1), COMPUTER SCIENCE, SOFTWARE ENGINEERING: 5/104 (Q1), TELECOMMUNICATIONS: 9/77 (Q1)},
+  ISSN =         {1520-9210},
+  resumen =      {En este trabajo se plantea extender el protocolo JPIP (JPEG2000 Interactive Protocol) para mejorar su rendimiento cuando JPIP es empleado para la transmisión de secuencias de imágenes. Dicha extensión consiste en el diseño de un algoritmo de control de flujo de datos denominado "Continue", que permite modificar los parámetros que de forma interactiva pueden cambiar durante la transmisión (ancho de banda, frame-rate, WOI, etc.), sin necesidad de detener el envío de datos. La parte más pesada del algoritmo recae en el lado del cliente, por lo que la propuesta presenta una buena escalabilidad. Los resultados experimentales indican que un incremento consistente de la calidad de las reconstrucciones, especialmente cuando la latencia del enlace es alta.}
+}
+
+@InProceedings{ORTIZ10b,
+  AUTHOR =       {García-Ortiz, J.P. and
+                  González-Ruiz, V. and
+                  García, I. and
+		  M\"{u}ller, D. and
+		  Dimitoglou, G.},
+  URL =          {http://dx.doi.org/10.1109/ICPR.2010.778},
+  TITLE =        {Interactive Browsing of Remote JPEG 2000 Image Sequences},
+  BOOKTITLE =    {International Conference on Pattern Recognition (ICPR)},
+  PAGES = 	 {3179-3182},
+  YEAR = 	 {2010},
+  address = 	 {Istambul, Turkey},
+  MONTH = 	 {August},
+  publisher =    {IEEE press},
+  quality =      {\href{http://core.edu.au/cms/images/downloads/conference/08sortTITLEERA2010_conference_list.pdf}{CORE B}},
+  quality_long = {\newline\textbf{Indicios de calidad:} El congreso
+                  IEEE ICPR (International Conference on Pattern
+                  Recognition) está clasificado en el CORE (COmputer
+                  Research AND Education) Conference Ranking de 2008,
+                  como \textbf{CORE B}
+                  (\href{http://core.edu.au/cms/images/downloads/conference/08sortTITLEERA2010_conference_list.pdf}
+                  {\texttt{http://core.edu.au}})},
+}
+
+@InProceedings{ORTIZ10a,
+  AUTHOR = 	 {García-Ortiz, J.P. and
+                  González-Ruiz, V. and
+                  García, I. and
+		  M\"{u}ller, D. and
+		  Dimitoglou, G.},
+  TITLE =        {An efficient prefetching strategy for remote browsing of JPEG 2000 image sequences},
+  BOOKTITLE =    {Proceedings of Workshop on Image Analysis for Multimedia Interactive Services (WIAMIS)},
+  PAGES = 	 {1 - 4},
+  YEAR = 	 {2010},
+  address = 	 {Desenzano del Garda, Italia},
+  MONTH = 	 {April},
+  abstract =     {This paper proposes an efficient prefetching
+                  strategy for interactive remote browsing of
+                  sequences of high resolution JPEG 2000 images. As a
+                  result of the inherent latency of client-server
+                  communication, the experiments of this study prove
+                  that a significant benefit, can be achieved, in
+                  terms of both quality and responsiveness, by
+                  anticipating certain data from the rest of the
+                  sequence while an image is being explored. This
+                  paper proposes a model based on the quality
+                  progression of the image in order to estimate which
+                  percentage of the bandwidth is dedicated to prefetch
+                  data. This solution can be easily implemented over
+                  any existing remote browsing architecture.}, 
+ URL =           {http://ieeexplore.ieee.org/xpls/abs\_all.jsp?arnumber=5617679},
+ quality_long = "\newline\textbf{Indicios de calidad:} El congreso
+                  IEEE WIAMIS (Workshop on Image Analisis for
+                  Multimedia Interactive Services) está organizado por
+                  el IEEE y sus publicaciones aparecen la IEEE Xplore
+                  Digital Library. Todos los artículos publicados en
+                  el IEEE WIAMIS pasan por un proceso de revisión por
+                  parte de expertos anónimos que avala la calidad de
+                  los mismos"
+}
+
+@Article{MARTIN10,
+  AUTHOR = 	 {Martín, Gabriel and
+                  González-Ruiz, Vicente and
+                  Plaza, Antonio and
+                  Ortiz, Juan P. and
+                  García, Inmaculada},
+  TITLE =        {Impact of JPEG2000 compression on endmember extraction and unmixing of remotely sensed hyperspectral data},
+  JOURNAL = 	 {SPIE Journal of Applied Remote Sensing},
+  YEAR = 	 {2010},
+  VOLUME = 	 {4},
+  NUMBER = 	 {041796},
+  PAGES = 	 {1-24},
+  MONTH = 	 {July},
+  URL =          {http://dx.doi.org/10.1117/1.3474975},
+  issn =         {1931-3195},
+  IMPACT =       {(JCR 2010) $1.000$},
+  RANKINGS =     {(JCR 2010) 11th out of 22 (Q2) journals in REMOTE SENSING; 7th out
+                  of 19 journals in IMAGING SCIENCE AND PHOTOGRAPHIC
+                  TECHNOLOGY; 144rd out of 193 journals in
+                  ENVIRONMENTAL SCIENCES (ISI JCR 2010)},
+  history =      {Submited 28 November 2009; revised 1 March 2010;
+                  accepted 19 April 2010; published 14 July 2010},
+  cites = {1 (Web of Science), 2 (Scopus), 3 (Scholar)},
+}
+
+@INPROCEEDINGS{MARTIN09,
+  AUTHOR = {G. Martín and V.G. Ruiz and A. Plaza and J.P. Ortiz and I. García},
+  TITLE = {Impact of JPEG2000 Compression on Spatial-Spectral Endmember Extraction from Hyperspectral Data},
+  BOOKTITLE = {Proceedings of SPIE, Satellite Data Compression, Communication and Processing V},
+  PUBLISHER = {SPIE},
+  ISBN = {},
+  ISSN = {0277-786X},
+  VOLUME= {7455},
+  PAGES = {74550A1 - 74550A11},
+  ADDRESS = {San Diego, CA, United States},
+  MONTH = {August},
+  YEAR = {2009},
+  URL = {http://dx.doi.org/10.1117/12.826318},
+  references = {CCC code:0277-786X/09/\$18 - doi: 10.1117/12.826318},
+}
+
+@Article{MULLER01,
+  AUTHOR={Muller, D. and Fleck, B. and Dimitoglou, G. and Caplins,
+                  B.W. and Amadigwe, D.E. and Ortiz, J.P.G. and
+                  Wamsler, B. and Alexanderian, A. and Hughitt,
+                  V.K. and Ireland, J.},
+  JOURNAL={Computing in Science and Engineering},
+  TITLE={JHelioviewer: Visualizing Large Sets of Solar Images Using JPEG2000},
+  URL={http://dx.doi.org/10.1109/MCSE.2009.14},
+  YEAR={2009},
+  MONTH={sep.},
+  VOLUME={11},
+  NUMBER={5},
+  PAGES={38-47},
+  abstract={All disciplines that work with image data-from
+                  astrophysics to medical research and historic
+                  preservation-increasingly require efficient ways to
+                  browse and inspect large sets of high-resolution
+                  images. Based on the JPEG 2000 image-compression
+                  standard, the JHelioviewer solar image visualization
+                  tool lets users browse petabyte-scale image archives
+                  as well as locate and manipulate specific data
+                  sets.},
+  keywords={JPEG 2000 image-compression;astrophysics;high-resolution
+                  image;historic preservation;solar image
+                  visualization tool;astronomy computing;data
+                  compression;data visualisation;image coding;image
+                  resolution;},
+  URL ={http://dx.doi.org/10.1109/MCSE.2009.142},
+  ISSN={1521-9615},
+  IMPACT = {(JCR 2008) $0.973$},
+  quality_long = {(JCR 2008) 57th out 94 journals in Computer Science,
+                  Interdisciplinary applications (ISI JCR 2008)},
+}
+
+@InProceedings{MEDINA14,
+  URL           = {http://www.w3.org/2013/10/tv-workshop/papers/webtv4_submission_5.pdf},
+  AUTHOR	= {Medina-L\'opez, Crist\'obal and
+                   Garc{\'i}a Ortiz, Juan Pablo and
+                   Maranjo, J.A.M and
+                   Casado, L.G. and
+                   Gonz\'alez-Ruiz, Vicente},
+  TITLE		= {IPTV using P2PSP and HTML5+WebRTC},
+  BOOKTITLE	= {The Fourth W3C Web and TV Workshop (Web \& TV Convergence)},
+  PAGES		= {Paper Submission 5},
+  YEAR		= {2014},
+  address	= {Munchen, Germany},
+  MONTH		= {March},
+  organization	= {IRT (Institut f\"ur Rundfunktechnik), Munchen, Germany},
+  publisher	= {The World Wide Web Consortium (W3C)},
+  EVIDENCES = {},
+  TRANSFERENCE = {El Web and TV Workshop (Web & TV Convergence) fue un encuentro organizado por la W3C en el que que las empresas pioneras en la fabricación de televisores inteligentes (smart TV) y los investigadores en el campo de la multimedia relacionada con la Web intercambiaron conocimientos sobre los últimos avances en estas dos áreas (los dispositivos y el software relacionado con la Web que deberían ejecutar dichos dispositivos). Nuestra contribución consistió en analizar el uso del protocolo P2PSP (https://p2psp.github.io/) para realizar streaming de vídeo en smart TVs. La W3C es el organismo que controla el desarrollo de la Web. Por tanto, la participación a un evento de este tipo es un hito importante de cara a la transferencia de conocimiento, especialmente a la industria relacionada.}
+}
+
+@InProceedings{MEDINA13,
+  AUTHOR = 	 {Medina-López, Cristóbal and
+                  Muñoz-Naranjo, Juan Álvaro and
+		  García-Ortiz, Juan Pablo and
+		  González-Casado, Leocadio and
+		  González-Ruiz, Vicente},
+  TITLE = 	 {Execution Of The P2PSP Protocol In Parallel Environments},
+  BOOKTITLE =    {XXIV Jornadas De Paralelismo},
+  URL =          {http://www.congresocedi.es/images/site/actas/ActasParalelismo.pdf},
+  YEAR = 	 {2013},
+  MONTH = 	 {Septiembre},
+  address =      {Madrid},
+  organization = {Sociedad de Arquitectura y Tecnología de Computadores (SARTECO)}
+}
+
+@InProceedings{HERNANDEZ13a,
+  URL           = {http://www.hpca.ual.es/~vruiz/papers/HERNANDEZ13a.pdf},
+  AUTHOR	= {S\'anchez-Hern\'andez, J.J.  and Garc{\'i}a-Ortiz,
+                  J.P. and Maturana-Espinosa, Carmelo and
+                  Gonz\'alez-Ruiz, Vicente and M\"uller, Daniel},
+  TITLE		= {Streaming Interactivo de Secuencias de Im\'agenes
+                  JPEG2000 de Alta Resoluci\'on},
+  BOOKTITLE	= {Actas de las XXIV Jornadas de Paralelismo},
+  PAGES		= {139-144},
+  YEAR		= {2013},
+  address	= {Madrid, Spain},
+  MONTH		= {September},
+  organization	= {Sociedad de Arquitectura y Tecnolog\'ia de
+                  Computadores (SARTECO). Universidad Complutense de
+                  Madrid},
+  publisher	= {Servicio de Publicaciones. Universidad Complutense
+                  de Madrid}
+}
+
+@InBook{ORTIZ13,
+  AUTHOR = 	 {Garc{\'i}a-Ortiz, Juan Pablo and Gonz\'alez-Ruiz,
+                  Vicente and Garc{\'i}a, Inmaculada and M\"uller,
+                  Daniel and Dimitoglou, George},
+  editor = 	 {N. Adami et al.},
+  TITLE = 	 {An Efficient Prefetching Strategy for Remote Browsing of JPEG 2000 Image Sequences},
+  chapter = 	 {14},
+  publisher = 	 {Springer},
+  YEAR = 	 {2013},
+  URL =          {http://www.hpca.ual.es/~vruiz/papers/ORTIZ13.pdf},
+  doi = {http://link.springer.com/chapter/10.1007\%2F978-1-4614-3831-1\_14},
+  VOLUME = 	 {15},
+  series = 	 {Analysis, Retrieval and Delivery of Multimedia Content, Lecture Notes in Electrical Engineering},
+  address = 	 {New York},
+  PAGES = 	 {239-251},
+  note = 	 {Print ISBN: 978-1-4614-3830-4, Online ISBN: 978-1-4614-3831-1},
+  summary =      {}
+}
+
+@InProceedings{HERNANDEZ12,
+  AUTHOR = 	 {J.J. S\'anchez-Hern\'andez and J.P. Garc{\'i}a-Ortiz and C. Mart{\'i}n and Carmelo Maturana-Espinosa and Vicente Gonz\'alez-Ruiz and Daniel M\"uller},
+  URL = {http://www.hpca.ual.es/~vruiz/papers/HERNANDEZ12.pdf},
+  TITLE = 	 {Improved JPIP-compatible architecture for video streaming of JPEG 2000 image sequences},
+  BOOKTITLE = {Proceedings of the II Workshop on Multimedia Data Coding and Transmission (WMDCT)},
+  PAGES = 	 {33-37},
+  YEAR = 	 {2012},
+  address = 	 {Elche, Alicante, Spain},
+  MONTH = 	 {September},
+  organization = {Grupo de Arquitectura y Tecnología de Computadores (GATCOM)},
+  publisher = {Universidad Miguel Hern\'andez}
+}
+
+@InProceedings{MATURANA12,
+  AUTHOR = 	 {Carmelo Maturana-Espinosa and J.J. S\'anchez-Hern\'andez and J.P. Garc{\'i}a-Ortiz and Vicente Gonz\'alez-Ruiz},
+  URL = {http://www.hpca.ual.es/~vruiz/papers/MATURANA12.pdf},
+  TITLE = 	 {Scalable Video Coding using Motion Compensated JPEG 2000},
+  BOOKTITLE = {Proceedings of the II Workshop on Multimedia Data Coding and Transmission (WMDCT)},
+  PAGES = 	 {38-43},
+  YEAR = 	 {2012},
+  address = 	 {Elche, Alicante, Spain},
+  MONTH = 	 {September},
+  organization = {Grupo de Arquitectura y Tecnología de Computadores (GATCOM)},
+  publisher = {Universidad Miguel Hern\'andez}
+}
+
+@inproceedings{ORTIZ11,
+  AUTHOR = {García-Ortiz, J.P. and
+            Martín, C. and
+            Gonz\'{a}lez-Ruiz, V. and
+	    S\'{a}nchez-Hern\'{a}ndez, J.J. and
+	    García, I. and
+	    M\"{u}eller, D.},
+  BOOKTITLE = {IEEE International Conference on Consumer Electronics},
+  PAGES = {380-384},
+  URL = {http://dx.doi.org/10.1109/ICCE-Berlin.2011.6031879},
+  TITLE = {{Efficient and scalable open-source JPIP server for streaming of large volumes of image data}},
+  MONTH = {September},
+  YEAR = {2011},
+  address = {Berlin, Germany},
+  sexenio = {}
+}
+
+@InProceedings{HERNANDEZ11,
+  AUTHOR = {Sánchez-Hernández, J.J. and
+            García-Ortiz, J.P. and
+            González-Ruiz, V. and
+	    García, I. and
+            M\"{u}ller, D},
+  URL = {http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6731257&isnumber=6731224},
+  TITLE = {Transmission of low-motion JPEG2000 image sequences using client-driven conditional replenishment},
+  BOOKTITLE = {Proceedings of the International Conference on Signal Processing and Multimedia Applications (SIGMAP)},
+  PAGES = {11 - 16},
+  YEAR = {2011},
+  MONTH = {July},
+  address = {Sevilla, Spain},
+  publisher = {SciTePress - Science and Technology Publications}
+}
+
+@InProceedings{ORTIZ10c,
+  AUTHOR = 	 {García-Ortiz, J.P. and
+                  Dana, J.M. and
+                  González-Ruiz, V. and
+		  García, I.},
+  URL = {http://www.hpca.ual.es/~vruiz/papers/ORTIZ10c.pdf},
+  TITLE =        {Broadcasting of H.264/SVC video over BitTorrent-like networks},
+  BOOKTITLE =    {Actas del Workshop on Multimedia Data Coding and Transmission (WMDCT)},
+  PAGES = 	 {41-46},
+  YEAR = 	 {2010},
+  MONTH = 	 {Septiembre},
+  publisher =    {Garceta Grupo Editorial},
+  address = "Valencia, Spain"
+}
+
+@ARTICLE(ORTIZ08a,
+  AUTHOR = "Ortiz, J.P. and Ruiz, V.G. and L{\'o}pez, M.F. and
+                   Garc{\'i}a, I.",
+  TITLE = {Interactive transmission of {JPEG2000} images using {W}eb proxy caching},
+  JOURNAL = {IEEE Transactions on Multimedia},
+  MONTH = "June",
+  YEAR = "2008",
+  VOLUME = "10",
+  NUMBER = "4",
+  PAGES = "629-636",
+  URL = {http://dx.doi.org/10.1109/TMM.2008.921738},
+  IMPACT = "(JCR 2008) $2.288$",
+  RANKINGS = "(JCR 2008) 19th out 99 (Q1) journals in COMPUTER SCIENCE, INFORMATION
+                  SYSTEMS, 12th out 86 (Q1) journals in COMPUTER SCIENCE,
+                  SOFTWARE ENGINEERING and 10th out 67 (Q1) journals in
+                  TELECOMMUNICATIONS (ISI JCR 2008)",
+  history = "Submited February 1, 2007; revised September 5, 2007,
+                  revised November 30, 2007; accepted December 2,
+                  2007; published June, 2008",
+  references = "http://dx.doi.org/10.1109/TMM.2008.921738",
+  ISSN = "1520-9210",
+  sexenio = "Se propone y analiza el rendimiento de un nuevo protocolo  al que denominamos JPIP-W (an improved JPIP for the  Web), y que es una extensión de y compatible con  \href{http://www.jpeg.org/jpeg2000/j2kpart9.html}{JPIP}  (JPeg 2000 Interactive Protocol), el protocolo  estándar definido por la ISO para la transmisión  interactiva de imágenes  \href{http://www.jpeg.org/jpeg2000/}{JPEG  2000}. JPIP-W es, a diferencia de JPIP, capaz de  aprovechar los proxies Web para cachear imágenes  JPEG 2000. Esto significa que, tal y como se  demuestran en las simulaciones realizadas, en  aquellas situaciones donde exista redundancia (datos  comunes) en el acceso interactivo a imágenes remotas  JPEG 2000 por parte de uno o más usuarios y una  infraestructura con uno o más proxies, JPIP-W va a  proporcionar un rendimiento muy superior a JPIP. Por  otra parte, en aquellas configuraciones donde no  exista un proxy Web, la penalización de usar JPIP-W  frente a JPIP es mínima.",
+  quality_long = "\newline\textbf{Indicios de calidad:} La revista IEEE
+                  Transactions on Multimedia es de las más importantes
+                  en el campo de la codificación y transmisión de
+                  contenidos multimedia. Según datos del
+                  \textbf{Journal Citation Reports} del ISI Web of
+                  Knowledge de 2008, año en que el artículo es
+                  publicado, la revista tiene un índice de impacto de
+                  $\textbf{2.288}$ y aparece en puesto 19 de un total
+                  de 99 revistas en la categoría COMPUTER SCIENCE,
+                  INFORMATION SYSTEMS, en el puesto 12 de 86 revistas
+                  en la categoría COMPUTER SCIENCE, SOFTWARE
+                  ENGINEERING, y en el puesto 10 de 67 revistas en la
+                  categoría TELECOMMUNICATIONS",
+  cites = {6 (Web of Science), 10 (Scopus), 11 (Scholar)}
+)
+
+@ARTICLE(ORTIZ07e,
+  AUTHOR = "J.P. Ortiz and V.G. Ruiz and I. Garc{\'i}a", 
+  TITLE = {Efficient Virtual Slide Telepathology Systems with JPEG2000},
+  JOURNAL = "Scientific Journal on Applied Information Technology (JAPIT)",
+  VOLUME = "3",
+  PUBLISHER = "Faculty of Electrical Engineering and Computer Science, University of Maribor, Slovenia",
+  PAGES = "16-22",
+  ISBN = "",
+  ISSN = "1683-1373",
+  MONTH = "",
+  URL = {http://www.hpca.ual.es/~vruiz/papers/ORTIZ07e.pdf},
+  quality_long = "\newline\textbf{Indicios de calidad:} JAPIT es una
+                  revista electrónica aceptada por el IET (Institution
+                  of Engineering and Technology) e indexada en la base
+                  de datos INSPEC",
+  YEAR = "2007",
+  references = "",
+  es_abstract = "\newline\textbf{Resumen:} Este trabajo explora las
+                  posibilidades del estándar JPEG 2000 para realizar
+                  stitching de imágenes médicas, en concreto, en el
+                  campo de la telepatología. Stitching es el proceso
+                  de generar imágenes a partir de un conjunto de
+                  imágenes de menor tamaño, para así crear una imagen
+                  de alta resolución como una composición de estas
+                  imágenes. Para que en la imagen de alta resolución
+                  no sean perceptibles los bordes de las sub-imágenes,
+                  éstas deben capturarse con un cierto solapamiento y
+                  las regiones comunes se utilizan para crear un
+                  promediado. Cuando este proceso se realiza en el
+                  dominio de la imagen es necesario descomprimir las
+                  imágenes antes de realizar el promediado. Cuando se
+                  realiza en el dominio transformado (el dominio
+                  nativo de JPEG 2000), el propio banco de filtros de
+                  síntesis de la DWT realiza este trabajo. Por tanto,
+                  nuestra propuesta reduce los requerimientos de
+                  procesamiento y de memoria para realizar dicha
+                  tarea"
+)
+
+@INPROCEEDINGS(ORTIZ07d,
+  AUTHOR = "J.P. Ortiz",
+  TITLE = "{Towards Efficient Remote Browsing Systems}",
+  BOOKTITLE = "IADIS Multi Conference on Computer Science and Information Systems",
+  PUBLISHER = "International Association for Development of the Information Society (IADIS)",
+  ISBN = "",
+  ISSN = "",
+  PAGES = "",
+  ADDRESS = "Lisbon, Portugal",
+  MONTH = "July",
+  YEAR = "2007"
+)
+
+@INPROCEEDINGS(ORTIZ07c,
+  AUTHOR = "J.P. Ortiz and V.G. Ruiz and I. Garc{\'i}a",
+  TITLE = "Virtual Slide Telepathology Systems with JPEG2000",
+  BOOKTITLE = "29th Annual International Conference of the IEEE EMBS (Engineering in Medicine and Biology Society)",
+  PUBLISHER = "IEEE Computer Society",
+  ISBN = "1-4244-0788-5",
+  ISSN = "1557-170X",
+  PAGES = "880 - 883",
+  ADDRESS = "Lyon, France",
+  MONTH = "August",
+  references = "0 (Scopus 18/04/2008)",
+  YEAR = "2007",
+  URL = {http://dx.doi.org/10.1109/IEMBS.2007.4352431},
+  quality =      {CORE C},
+  quality_long = "\newline\textbf{Indicios de calidad:} El congreso IEEE
+                  EMBS (Engineering in Medicine and Biology Society)
+                  aparece clasificado en el 2007 CORE (COmputer
+                  Research and Education) Conference Ranking, como
+                  \textbf{CORE C}
+                  (\href{http://www.cs.wm.edu/~srgian/tier-conf-final2007.html}
+                  {\texttt{http://www.cs.wm.edu}})",
+  es_abstract = "\newline\textbf{Resumen:} En este trabajo se presenta
+                  y estudia una novedosa técnica de stitching (unión
+                  de imágenes fusionando sus bordes) en el dominio
+                  JPEG2000, extremadamente rápida, con la idea de
+                  usarse en un sistema interactivo de telepatología,
+                  de forma que a partir de un conjunto de imágenes de
+                  microscopía más pequeñas ligeramente solapadas entre
+                  sí se hace posible la generación de una imagen de
+                  alta resolución donde los bordes de unión de las
+                  sub-imágenes no es apreciable",
+  cites = {1 (Web of Science), 1 (Scopus), 4 (Scholar)}
+)
+
+@INPROCEEDINGS (ORTIZ07b,
+  AUTHOR = "J.P. Ortiz and V.G. Ruiz and F. Marcano and O. Ferrer-Roca",
+  URL = {http://www.hpca.ual.es/~vruiz/papers/ORTIZ07b.pdf},
+  TITLE = {Stiching and remote browsing of images using JPEG2000 and JPIP},
+  BOOKTITLE = "XV Winter Course of CATAI",
+  ISBN = "84-611-4268-X",
+  ISSN = "",
+  PAGES = "112 - 116",
+  ADDRESS = "La Laguna, España",
+  MONTH = "Marzo",
+  YEAR = "2007",
+  quality_long = "\newline\textbf{Indicios de calidad:} CATAI (CENTRO y
+                  Cursos de Alta Tecnología y Análisis de Imagen) es
+                  una asociación sin ánimo de lucro cuya actividad
+                  científica está relacionada con temas de análisis de
+                  imagen y transmisión de imágenes en el contexto de
+                  la telemedicina. Los artículos publicados en este
+                  curso son presentados a especialistas de ámbito
+                  internacional en el campo de la telemecina"
+)
+
+@INPROCEEDINGS (ORTIZ07a,
+	AUTHOR = "J.P. Ortiz and V.G. Ruiz and I. Garc{\'i}a",
+  TITLE = "{An efficient client-based JPEG2000 image transmission protocol}",
+  BOOKTITLE = "Proceedings of the IS\&T/SPIE 19th Annual Symposium on Electronic Imaging Science and Technology",
+  ISBN = "",
+  ISSN = "0277-786X",
+  VOLUME = "6507",
+  PAGES = "0S-1 - 0S-12",
+  ADDRESS = "San José, California, USA",
+  MONTH = "January",
+  YEAR = "2007",
+  URL = {http://dx.doi.org/10.1117/12.704300},
+  quality_long = "\newline\textbf{Indicios de calidad:} La SPIE (Society of
+                  Photo-optical Instrumentation Engineers) organiza
+                  cada año unos 25 congresos internacionales y
+                  mantiene la SPIE Digital Library, una biblioteca de
+                  artículos científicos que almacena actualmente unas
+                  280000 referencias. En el congreso Electronic
+                  Imaging (Science and Technology) se presentan
+                  algunos de los trabajos de investigación más
+                  importantes en el campo de las tecnologías
+                  relacionadas con el tratamiendo de imágenes
+                  digitales",
+  cites = {2 (Scholar)}
+)
+
+@INPROCEEDINGS(DANA05,
+  AUTHOR = "J.M. Dana and V.G. Ruiz and M.F. L{ó}pez and S.G. Rodr{\'i}guez and J.P. Ortiz and I. Garc{\'i}a",
+  URL = {http://www.hpca.ual.es/~vruiz/papers/DANA05.pdf},
+  TITLE = {Transmisión Multicast en Tiempo Real de Vídeo MPEG-4},
+  BOOKTITLE = "Actas de las XVI Jornadas de Paralelismo",
+  ISBN = "",
+  ISSN = "",
+  PAGES = "229-234",
+  ADDRESS = "Granada, España",
+  MONTH = "Septiembre",
+  YEAR = "2005"
+)
+
+@INPROCEEDINGS (LOPE05b,
+  AUTHOR = "M.F. L{ó}pez and S.G. Rodr{\'i}guez and J.P. Ortiz and V.G. Ruiz and I. Garc{\'i}a",
+  URL = {http://www.hpca.ual.es/~vruiz/papers/LOPE05b.pdf},
+  TITLE = {FSVC: Un nuevo codificador escalable de vídeo},
+  BOOKTITLE = "Actas de las XVI Jornadas de Paralelismo",
+  ISBN = "",
+  ISSN = "",
+  PAGES = "537-544",
+  ADDRESS = "Granada, España",
+  MONTH = "Septiembre",
+  YEAR = "2005"
+)
+
+@ARTICLE(LOPE05a,
+  AUTHOR = "M.F. L{ó}pez and S.G. Rodr{\'i}guez and J.P. Ortiz and
+                  J.M. Dana and V.G. Ruiz and I. Garc{\'i}a", 
+  TITLE = {FSVC: A new fully scalable video codec},
+  JOURNAL = "Lecture Notes in Computer Science. Computer Analysis of Images and Patterns",
+  VOLUME = "3691",
+  PUBLISHER = "Springer-Verlag",
+  PAGES = "171-178",
+  ISBN = "3-540-28969-0",
+  ISSN = "0302-9743",
+  MONTH = "September",
+  YEAR = "2005",
+  IMPACT = "(JCR 2005) $0.402$",
+  RANKINGS = "(JCR 2005) 62th out 71 (Q4) journals in COMPUTER SCIENCE, THEORY AND METHODS (ISI JCR 2005)",
+  URL = {http://dx.doi.org/10.1007/11556121\_22},
+  sexenio = "Se describe el codificador de vídeo escalable FSVC (Fully
+                  Scalable Video Codec). Este codec utiliza MCTF
+                  (Motion Compensated Temporal Filtering) y JPEG 2000
+                  para generar un code-stream que puede ser truncado
+                  en diferentes puntos, permitiendo descodificaciones
+                  escalables en calidad, en resolución espacial y en
+                  resolución temporal. Para probar su rendimiento,
+                  FSVC es comparado con otro codec escalable llamado
+                  RWMH (Redundant-Wavelet Multihypothesis), resultando
+                  que FSVC es más eficiente en términos
+                  calidad/bit-rate. Destacar además que FSVC es
+                  compatible con el estándar JPEG 2000 cuando el
+                  número de niveles de resolución temporal es 1.",
+  quality_long = "\newline\textbf{Indicios de calidad:} La revista
+                  Lecture Notes in Computer Science está indexada en
+                  2005 por el \textbf{Journal Citation Reports} del
+                  ISI Web of Knowledge con un índice de impacto de
+                  $\textbf{0.402}$, apareciendo en el puesto 62 de 71
+                  revistas en la categoría COMPUTER SCIENCE, THEORY
+                  AND METHODS. Este artículo es publicado a través del
+                  congreso CAIP (International Conference on Computer
+                  Analysis of Images and Patterns) 2005 que está
+                  clasificado como \textbf{CORE B} en el CORE
+                  (COmputer Research and Education) Conference RANKINGS
+                  de 2007, 2008 y 2009
+                  (\href{http://core.edu.au/cms/images/downloads/conference/08sortTITLEERA2010_conference_list.pdf}
+                  {\texttt{http://core.edu.au}})",
+  cites = {1 (Web of Science), 2 (Scopus), 1 (Scholar)}
+)
+
+@INPROCEEDINGS (LOPE05,
+  AUTHOR = "M.F. L{ó}pez and S.G. Rodr{\'i}guez and J.P. Ortiz and J.M. Dana and V.G. Ruiz and I. Garc{\'i}a",
+  TITLE =  {Fully scalable video coding with packed stream},
+  BOOKTITLE = "Proceedings of the IS\&T/SPIE 17th Annual Symposium on Electronic Imaging Science and Technology",
+  PUBLISHER = "SPIE",
+  ISBN = "0-8194-5658-6",
+  ISSN = "0277-786X",
+  PAGES = "378-389",
+  ADDRESS = "San José, California, USA",
+  MONTH = "January",
+  YEAR = "2005",
+  URL = {http://dx.doi.org/10.1117/12.587585},
+  references = "0 (Scopus 18/04/2008)",
+  quality_long = "\newline\textbf{Indicios de calidad:} La SPIE (Society of
+                  Photo-optical Instrumentation Engineers) organiza
+                  cada año unos 25 congresos internacionales y
+                  mantiene la SPIE Digital Library, una biblioteca de
+                  artículos científicos que almacena actualmente unas
+                  280000 referencias.  En el congreso Electronic
+                  Imaging (Science and Technology) se presentan
+                  algunos de los trabajos de investigación más
+                  importantes en el campo de las tecnologías
+                  relacionadas con el tratamiendo de imágenes
+                  digitales",
+  number_of_cites = {2
+                  (\href{http://scholar.google.es/scholar?hl=es&q=%22Fully+scalable+video+coding+with+packed+stream%22&btnG=Buscar&lr=&as_ylo=&as_vis=0}{\texttt{http://scholar.google.es}})}
+)
+
+@ARTICLE(ORTIZ04a,
+  AUTHOR = "J.P. Ortiz and V.G. Ruiz and I. Garc{\'i}a",
+  TITLE = "Improving {W}eb proxy caching on browsing {JPEG2000} remote images with {JPIP}",
+  URL = {http://www.hpca.ual.es/~vruiz/papers/ORTIZ04a.pdf},
+  JOURNAL = "ACTA Press",
+  VOLUME = "1",
+  NUMBER = "1",
+  PUBLISHER = "World Scientific and Engineering Academy and Society",
+  PAGES = "167-172",
+  ISSN = "1790-0832",
+  MONTH = "July",
+  IMPACT =  {(SJR 2006) $0.034$},
+  quality_long = "\newline\textbf{Indicios de calidad:} Todos los
+                  artículos publicados en los libros y revistas
+                  periódicas editadas por WSEAS se revisan por tres
+                  expertos de renombre internacional antes de ser
+                  aceptados. Esta revista además se encuentra indexada
+                  por INSPEC, SCImago y Scopus. Según los datos del
+                  \textbf{SCImago Journal RANKINGS}
+                  (\href{http://www.scimagojr.com/journalrank.php}
+                  {\texttt{http://www.scimagojr.com}}) a FECHA de 2006
+                  (el primer año que hay datos disponibles), la
+                  revista WSEAS Transactions on Information Science
+                  and Applications posee un indicador SJR de
+                  $\textbf{0.034}$, apareciendo en el puesto 47 de 58
+                  revistas en la categoría COMPUTATIONAL MATHEMATICS y
+                  en el puesto 77 de 108 revistas en la categoría
+                  COMPUTER SCIENCE (MISCELLANEOUS). Por otra parte,
+                  indicar que la línea de trabajo que básicamente se
+                  incia en esta publicación es la que finalmente, en
+                  2010 da lugar a un contrato
+                  (\href{http://www.20minutos.es/noticia/878123/0/}{\texttt{http://www.20minutos.es/noticia/878123/0}},
+                  \href{http://www.ideal.es/almeria/20101118/local/almeria/nasa-ficha-equipo-cientificos-201011181456.html}{\texttt{http://www.ideal.es/almeria/20101118/local/almeria/\-nasa-ficha-equipo-cientificos-201011181456.html}})
+                  entre la empresa IPTV Solutions
+                  (\href{http://www.iptv-solutions.es}{\texttt{http://www.iptv-solutions.es}})
+                  y la ESA (European Space Agency) para desarrollar un
+                  servidor de imágenes JPEG 2000 que va a ser usado en
+                  el proyecto JHelioviewer
+                  (\href{http://www.jhelioviewer.org/}{\texttt{http://www.jhelioviewer.org}})",
+  number_of_cites = {1 (\href{http://scholar.google.es/scholar?hl=es&q=%22Improving+Web+proxy+caching+on+browsing+JPEG2000+remote+images+with+JPIP%22&btnG=Buscar&lr=&as_ylo=&as_vis=0}{\texttt{http://scholar.google.es}})},
+  YEAR = "2004",
+  es_abstract = "\newline\textbf{Resumen:} Los servidores JPIP
+                  mantienen un modelo de la caché de los clientes con
+                  el fin de evitar el envío de información redundante
+                  en el caso en que un cliente realice dos peticiones
+                  de dos WOIs (Window Of Interest) solapadas. Esto
+                  genera el inconveniente de que las respuestas JPIP
+                  no pueden cacheadas deacuadamente por un proxy Web
+                  porque dos peticiones iguales pueden ser servidas de
+                  forma diferente. En este trabajo se presenta una
+                  modificación del protocolo JPIP que afecta a la
+                  forma en que los clientes demandan las WOIs, de
+                  manera que se conserva la correspondencia unívoca
+                  petición-respuesta, permiendo así el uso de proxies
+                  Web para cachear respuestas JPIP"
+)
+
+@INPROCEEDINGS(ORTIZ04b,
+  AUTHOR = "J.P. Garc{\'i}a-Ortiz and V.G. Ruiz and I. Garc{\'i}a",
+  URL = {http://www.hpca.ual.es/~vruiz/papers/ORTIZ04b.pdf},
+  TITLE = {Remote browsing of {JPEG} 2000 images on the {W}eb: evaluation of existing techniques and a new proposal},
+  BOOKTITLE = "Proceedings of the Fourth IASTED International Conference on Visualization, Imaging, and Image Processing",
+  PUBLISHER = "Acta Press",
+  ISBN = "0-88986-454-3",
+  ISSN = "1482-7921",
+  PAGES = "854-859",
+  ADDRESS = "Marbella, Spain",
+  MONTH = "September",
+  YEAR = "2004",
+  references = "1 (Scopus 18/04/2008)",
+  quality = {CORE C},
+  quality_long = "\newline\textbf{Indicios de calidad:} A FECHA de 2007, el
+                  IASTED VIIP está clasificado en el CORE (COmputer
+                  Research and Education) Conference Ranking, como
+                  \textbf{CORE C}
+                  (\href{http://www.cs.wm.edu/~srgian/tier-conf-final2007.html}
+                  {\texttt{http://www.cs.wm.edu}})",
+  cites = {1}
+)
+
+@INPROCEEDINGS(ORTIZ04c,
+  AUTHOR = "J.P. Garc{\'i}a-Ortiz and V.G. Ruiz and I. Garc{\'i}a",
+  URL = {http://www.hpca.ual.es/~vruiz/papers/ORTIZ04c.pdf},
+  TITLE = {Improving the remote browsing of {JPEG} 2000 images on the {W}eb},
+  BOOKTITLE = "Proceedings of the Fourth IASTED International Conference on Visualization, Imaging, and Image Processing",
+  PUBLISHER = "Acta Press",
+  ISBN = "0-88986-454-3",
+  ISSN = "1482-7921",
+  ADDRESS = "Marbella, Spain",
+  PAGES = "890-895",
+  MONTH = "September",
+  YEAR = "2004",
+  references = "0 (Scopus 18/04/2008)",
+  quality = {CORE C},
+  quality_long = "\newline\textbf{Indicios de calidad:} A FECHA de 2007, el
+                  IASTED VIIP está clasificado en el CORE (COmputer
+                  Research and Education) Conference Ranking, como
+                  \textbf{CORE C}
+                  (\href{http://www.cs.wm.edu/~srgian/tier-conf-final2007.html}
+                  {\texttt{http://www.cs.wm.edu}})"
+)
+
+@INPROCEEDINGS(ORTIZ04d,
+  AUTHOR = "J.P. Ortiz and V.G. Ruiz and I. Garc{\'i}a",
+  URL = {http://www.hpca.ual.es/~vruiz/papers/ORTIZ04d.pdf},
+  TITLE = {An efficient technique for remote browsing of {JPEG} 2000 images on the {W}eb},
+  BOOKTITLE = "Actas de las XV Jornadas de Paralelismo. Computaci{ó}n de Altas Prestaciones",
+  PUBLISHER = "Servicio de publicaciones de la Universidad de Almer{\'i}a",
+  ISBN = "84-8240-714-7",
+  PAGES = "322-327",
+  ADDRESS = "Almer{\'\i}a, España",
+  MONTH = "Septiembre",
+  YEAR = "2004")
+
+@INPROCEEDINGS(ORTIZ04e,
+  AUTHOR = "J.P. Ortiz and V.G. Ruiz and I. Garc{\'i}a",
+  URL = {http://www.hpca.ual.es/~vruiz/papers/ORTIZ04e.pdf},
+  TITLE ={Improved {JPIP} protocol with proxy caching},
+  BOOKTITLE = "Actas de las XV Jornadas de Paralelismo. Computaci{ó}n de Altas Prestaciones",
+  PUBLISHER = "Servicio de publicaciones de la Universidad de Almer{\'i}a",
+  ISBN = "84-8240-714-7",
+  PAGES = "328-333",
+  ADDRESS = "Almer{\'\i}a, España",
+  MONTH = "Septiembre",
+  YEAR = "2004")
+
+@INPROCEEDINGS (LOPE04,
+  AUTHOR = "M.F. L{ó}pez and S.G. Rodr{\'i}guez and J.P. Ortiz and V.G. Ruiz and I. Garc{\'i}a",
+  URL = {http://www.hpca.ual.es/~vruiz/papers/LOPE04.pdf},
+  TITLE = {T{é}cnicas para la codificaci{ó}n escalable de v{\'i}deo},
+  BOOKTITLE = "Actas de las XV Jornadas de Paralelismo. Computaci{ó}n de Altas Prestaciones",
+  PUBLISHER = "Servicio de publicaciones de la Universidad de Almer{\'i}a",
+  ISBN = "84-8240-714-7",
+  PAGES = "408-413",
+  ADDRESS = "Almer{\'\i}a, España",
+  MONTH = "Septiembre",
+  YEAR = "2004")
+
+@INPROCEEDINGS(RUIZ04a,
+  AUTHOR = "V.G. Ruiz and J.P. Garc{\'i}a-Ortiz and J.J. Fern{á}ndez and J.M. Carazo and I. Garc{\'i}a",
+  URL = {http://www.hpca.ual.es/~vruiz/papers/RUIZ04.pdf},
+  TITLE = {Progressive image transmission in telemicroscopy},
+  BOOKTITLE = "Proceedings of the thirteenth European Microscopy Congress, EMC 2004",
+  VOLUME = "1",
+  PAGES = "395-396",
+  ADDRESS = "Antwerp, Belgium",
+  MONTH = "August",
+  YEAR = "2004",
+  quality_long = "\newline\textbf{Indicios de calidad:} El EMC es una
+                  congreso que organiza cada año la European
+                  Microscopy Society y es uno de los más importantes
+                  en el campo de la telemicroscopía"
+)
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+@Project{GSoC15-NTS,
+  TITLE   = {NAT traversal via hole punching Set of Rules for P2PSP},
+  ENTITY  = {Google Inc.},
+  URL = {https://www.google-melange.com/archive/gsoc/2015/orgs/p2psp/projects/jellysheep.html},
+  PROGRAM = {Google Summer of Code (GSoC) 2015},
+  PROGRAMURL = {https://summerofcode.withgoogle.com/archive/2015},
+  start   = {2015/05/25},
+  finish  = {2015/08/31},
+  head    = {Max Mertens, Juan Pablo García Ortiz and Vicente González Ruiz},
+  BUDGET = {6{.}000$},
+  evidence = {Implementation at GitHub},
+  evidenceurl = {https://github.com/P2PSP/core/tree/master/doc/NTS},
+  ABSTRACT = {En su versión más inicial, el protocolo P2PSP forzaba a que todos los peers estuvieran directamente conectados entre sí. La capa NTS (NAT Traversal Set) permite que aquellos peers que corren detrás de un NAT puedan comunicarse con el resto de peers del overlay P2P.}
+}
+
+@Project{SOCIS12-JHC,
+  TITLE   = {The Helioviewer Channel},
+  ENTITY  = {European Space Agency},
+  URL = {http://wiki.helioviewer.org/wiki/SOCIS-2012_Ideas},
+  PROGRAM = {{ESA Summer of Code in Space (SoCiS)} 2012},
+  PROGRAMURL = {https://www.esa.int/Our_Activities/Space_Engineering_Technology/SOCIS_The_ESA_Summer_of_Code_in_Space},
+  start   = {2012/06/10},
+  finish  = {2012/10/28},
+  head    = {Gabor K\"ovesdán, Juan Pablo García Ortiz and Vicente González Ruiz},
+  BUDGET = {4{.}000 euros},
+  NUMBER_OF_RESEARCHERS = {3},
+  EVIDENCE = {Implementation at GitHub},
+  EVIDENCEURL = {https://github.com/vicente-gonzalez-ruiz/jhelioviewer-socis2012},
+  TRANSFERENCE = {SoCiS (Summer of Code in Space, https://socis.esa.int) es una iniciativa promovida por la ESA (European Space Agency) para generar software libre que pueda ser usado en sus proyectos. Para ello, anualmente la ESA realiza una convocatoria en la que las organizaciones mentoras proponen sus proyectos. La ESA selecciona entre 20 y 25 proyectos y los presenta a los estudiantes interesados en el SoCiS, que son los que realizan la implementación del software, tutorizados por los mentores entre los meses de junio a septiembre. Los estudiantes reciben 4000 Euros por su trabajo.
+
+  En el proyecto "The Helioviewer Channel" se desarrolló una aplicación Web para el streaming de imágenes solares de alta (4Kx4K) resolución, de manera que el usuario podía realizar la visualización escalable a diferentes niveles de resolución y seleccionar una región de interés a lo largo de la descarga interactiva. El código generado está alojado en GitHub (https://github.com/vicente-gonzalez-ruiz/jhelioviewer-socis2012).
+
+  Todos los proyectos soportados por la ESA poseen una serie de requisitos muy específicos (como que el software debe de estar perfectamente testeado, ser lo más eficiente posible, etc.), que garantizan la calidad de los desarrollos.}
+}
+
+@Project{GSoC17-REST,
+  TITLE = {Implementation of a REST WebService for the P2PSP media sources},
+  ENTITY = {Google Inc.},
+  PROGRAM = {Google Summer of Code (GSoC) 2017},
+  PROGRAMURL = {https://summerofcode.withgoogle.com/archive/2017},
+  start = {2017/06/01},
+  finish = {2017/08/31},
+  URL = {https://summerofcode.withgoogle.com/archive/2017/projects/5795608468127744/},
+  head = {A. Gauniyal, Juan Pablo García Ortiz and Vicente González Ruiz},
+  BUDGET = {6{.}000$},
+  EVIDENCE = {Implementation at GitHub},
+  EVIDENCEURL = {https://github.com/p2psp/crossroads},
+  TRANSFERENCE = {Google Summer of Code (GSoC) es un programa de periodicidad anual, financiado por Google, para el desarrollo de proyectos de software libre mediante la colaboración entre organizaciones sin ánimo de lucro (fundaciones, grupos de investigación, etc.) y estudiantes universitarios de todo el planeta. Los proyectos son propuestos por las organizaciones a Google, que selecciona y soporta económicamente los más interesantes. Cada proyecto es desarrollado, de mayo a agosto, por un estudiante y tutorizado por uno o varios mentores. Concretamente, en 2017, 1647 mentores de 69 nacionaliades distintas pertenecientes a 198 organizaciones de software libre dirigieron 1318 proyectos desarrollados por estudiantes de 72 nacionalidades diferentes. Generalmente, sólo 4 de cada 10 organizaciones que se presentaron al programa fueron elegidas. En promedio, sólo 1 de cada 4 estudiantes que solicitaron participar en el programa fueron seleccionados. Sólo 2 mentores de cada organización actuaron, además, como administradores (responsables) de su organización. En https://developers.google.com/open-source/gsoc/resources/stats#2017 pueden encontrarse estadísticas sobre el GSoC-2017.
+
+  "Implementation of a REST WebService for the P2PSP media sources" es proyecto para implementar una entidad nueva del Protocolo P2PSP (Peer-to-Peer Straightforward Protocol), encargada de proporcionar un servicio para la creación de canales de transmisión de vídeo bajo demanda de los usuarios (lo que sería equivalente a Youtube Live). Los detalles de la idea original están en la Página de Ideas para el GSoC-2017 mantenido por la organización P2PSP.org (http://www.p2psp.org/en/news/77-gsoc-2017-ideas-page). Los detalles del proyecto tal y como fueron aceptados por Google, así como el histórico de la ejecución del proyecto están en el GSoC Archive (https://summerofcode.withgoogle.com/archive/2017/projects/5795608468127744/). El informe final del estudiante y software desarrollado en el proyecto están publicados en GitHub (https://gist.github.com/agauniyal/3274b2adc8d9073b260e344ede8b9fa0 y https://github.com/p2psp/crossroads). Pueden encontrarse más evidéncias de mi participación en el GSoC en el Apartado 5 de mi CV online (https://hpca.ual.es/~vruiz/index.html#x1-100005).}
+}
+
+@ORGANIZATION{p2psp.org,
+  NAME = {\href{https://www.p2psp.org/}{P2PSP.org}},
+  TITLE = {Nonprofit organization that develops, among other things, the P2PSP protocol},
+  DESCRIPTION = {P2PSP is an application layer protocol designed for the real-time streaming of multimedia content over the Internet.},
+  START = {2015},
+  FINISH = {-},
+  FOUNDERS = {Cristóbal Medina López, Juan Pablo García Ortiz, Juan Alvaro Muñoz Naranjo, Leocadio González Casado y Vicente González Ruiz},
+  HEADS = {Cristóbal Medina López y Vicente González Ruiz}
+}
+
+@PFC{cliente_JPIP_android,
+  TITLE = {Visualización de Imágenes Remotas JPEG 2000 en Dispositivos Android},
+  modalidad = {Trabajo técnico},
+  descripcion = {Implementa un cliente JPIP para Android usando el NDK (C++)},
+  titulacion = {Ing. en Informática},
+  alumno = {José Antonio García Góngora},
+  calificacion = {M. Honor},
+  FECHA = {2012},
+  DIRECTORES = {Vicente González Ruiz, Juan Pablo García Ortiz y José Juán Sánchez Hernández},
+  observaciones = {}
+}
+
+@PhdThesis{JPtesis,
+  phd_candidate = {Juan Pablo García Ortiz},
+  supervisors = {Inmaculada García Fernández y Vicente González RUiz},
+  title = {Interactive Browsing of Remote JPEG 2000 Images},
+  university = {Universidad de Almería},
+  URL = {http://www.hpca.ual.es/~vruiz/papers/JPtesis.pdf},
+  faculty = {Escuela Superior de Ingenería},
+  year = {2012},
+  month = {May}, % 24
+  quality = {Doctorado europeo},
+  program = {Técnicas Informáticas Avanzadas},
+  calification = {Sobresaliente Cum Laude},
+  sexenio = {En esta tesis doctoral se han propuesto y evaluado diferentes alternativas que mejoran el rendimiento de los sistemas de visualización interactiva imágenes (y secuencias de imágenes) remotas JPEG 2000. Dichos sistemas son utilizados, por ejemplo, en astronomía, y permiten a los astrónomos explorar las imágenes de una forma sencilla, eficiente e intuitiva, y casi sin variaciones, podrían también ser usados, por ejemplo, en tele-medicina o tele-microscopía. La investigación realizada en esta tesis se ha centrado en cuatro contribuciones diferentes. La primera de ellas consiste en aprovechar las posibilidades de transmisión parcial de los objetos Web [http://en.wikipedia.org/wiki/Byte_Serving] que ofrece el HTTP (HyperText Transfer Protocol) 1.1, consiguiéndose así implementar un sistema de visualización remota usando un servidor Web estándar y una configuración concreta de parámetros de codificación de las imágenes (formato JPL). La segunda es la propuesta del protocolo JPIP-W, que a diferencia del protocolo estándar JPIP [http://www.jpeg.org/jpeg2000/j2kpart9.html], permite aprovechar los proxies Web. El JPIP-W es compatible con los clientes y servidores JPIP, y ofrece rendimientos muy superiores al JPIP cuando existe una infraestructura de cacheo disponible. Además, la penalización por usar JPIP-W en lugar de JPIP cuando no hay disponible un proxy Web es casi inapreciable. La tercera propuesta consiste en el diseño de un sistema de precarga de datos (prefetching) que optimiza la reconstrucción de secuencias de imágenes JPEG 2000. Dicha técnica se basa en la idea de que la mejora que una imagen JPEG 2000 experimenta durante una reconstrucción progresiva es mucho mayor al comienzo de la transmisión que al final. Teniendo en cuenta este comportamiento, se define un modelo matemático con el que se decide cuándo y cuánto precargar de cada imagen de una secuencia cuando el usuario va a alternar entre dos modos de visualización: el modo imagen y el modo vídeo. Finalmente, la cuarta contribución de esta tesis consiste en el diseño e implementación de un servidor JPIP [http://www.20minutos.es/noticia/878123/0/]. Dicho servidor está siendo actualmente utilizado en el proyecto JHelioviewer [http://jhelioviewer.org/] que está promovido por la Agencia Espacial Europea (ESA) y la National Aeronautics and Space Administration (NASA)},
+  abstract =     {The combination of the JPEG 2000 standard and the JPIP protocol is currently considered to be the  state-of-art for the development of applications for  remote browsing of images, specially when dealing  with very large images. This combination is widely  used in scientific areas (e.g. astronomy,  tele-medicine, etc.). This work has focused on these  technologies, studying their strengths and providing  approaches/alternatives for some of their  weaknesses. The research conducted in this thesis  has resulted in four different scientific and  technological contributions, some of which have led  to improvements to certain aspects of the  technology, while others have expanded various  features. The first contribution consists of  developing an architecture for interactive browsing  of JPEG 2000 images based on the HTTP (HyperText  Transfer Protocol), version 1.1, and the design of a  new file format called JPL. The main feature of this  approach is that it completely dispenses with a  specific server. It only requires an easy  implementation based on the use of the HTTP/1.1 and  the communication is managed entirely by the  clients. Experimental results show that its  performance is similar to the  \href{http://www.jpeg.org/jpeg2000/j2kpart9.html}{JPIP}  approach. The design of a new protocol called JPIP-W  (JPIP-Web friendly) is the second contribution of  this thesis. The research work has been based on the  study of an effective communication protocol  designed on the JPIP protocol for interactive image  browsing. JPIP-W takes advantage of the Web proxy  infrastructure to reduce image retrieval  transmission time, user latency and network  traffic. Experimental results show that JPIP-W  outperforms JPIP when there is cached data. When  there is no cached data, JPIP-W efficiency is  virtually as good as that of JPIP. A new efficient  prefetching technique for interactive remote  browsing of JPEG 2000 image sequences is also  proposed in this thesis. Its most relevant  characteristics are: i) it offers an easy  implementation that can be added to any existing  JPIP client/server architecture; ii) from the  client/server bandwidth available, a certain  fraction is allocated to prefetching, which is  estimated using a differential quality model  function; and iii) an average improvement of the  reconstructed WOI is always achieved, independently  of how much fine-tuning is carried out. Experimental  results prove that transitions through images of a  remote sequence become smoother and also provide  higher quality, improving the overall user  experience. The final contribution of this thesis  work is the implementation of a new opensource and  highly scalable JPIP server. This server is  currently being used in the JHelioviewer project,  with thousands of clients per day. The evaluation  results have shown that its performance is better  than the Kakadu JPIP server, in terms of  scalability, and also in terms of rate-distortion.}
+}
+
+@PFC{eSpectia_HTML5,
+  TITLE = {Integración del sistema de streaming de vídeo eSpectia con HTML5},
+  modalidad = {Trabajo técnico},
+  descripcion = {Estudia las posibilidades de la etiqueta \texttt{video} del HTML5 para ser usado como player en el entorno eSpectia},
+  titulacion = {Ing. en Informática},
+  alumno = {Víctor Manuel Martínez Torres},
+  calificacion = {M. Honor},
+  FECHA = {2012},
+  DIRECTORES = {Vicente González Ruiz, Juan Pablo García Ortiz},
+  observaciones = {}
+}
+
+@Project{SOCIS11-JPIP,
+  TITLE = {Interactive HD Video Streaming with JPIP},
+  ENTITY = {European Space Agency},
+  URL = {http://wiki.helioviewer.org/wiki/SOCIS-2011_Ideas},
+  PROGRAM = {{ESA Summer of Code in Space (SoCiS)} 2011},
+  PROGRAMURL = {https://www.esa.int/Our_Activities/Space_Engineering_Technology/SOCIS_The_ESA_Summer_of_Code_in_Space},
+  START = {2011/07/01},
+  FINISH = {2011/10/30},
+  HEAD = {Juan Pablo García Ortiz, Vicente González Ruiz and José Juan Sánchez Hernández},
+  EVIDENCE = {Implementation at Launchpad},
+  EVIDENCEURL = {https://code.launchpad.net/~josejuan-sanchez/jhelioviewer/soc},
+  BUDGET = {3{.}000 euros},
+  NUMBER_OF_RESEARCHERS = {3},
+  TRANSFERENCE = {El proyecto Interactive HD Video Streaming with JPIP desarrolló una versión especial del software JHelioviewer (https://www.jhelioviewer.org/) optimizado para transmitir secuencias de imágenes solares.}
+}
+
+@Contract{JPIP-server,
+  TITLE = {Implementation of a Highly Scalable JPIP Server for the ESA/NASA Jhelioviewer Project},
+  ENTITY = {European Space Agency},
+  URL = {https://www.europapress.es/andalucia/almeria-00350/noticia-iptv-solutions-firma-contrato-implementar-servidor-imagenes-nasa-20101118184035.html},
+  START = {2010/09/01},
+  FINISH = {2010/12/31},
+  HEAD = {Juan Pablo García Ortiz},
+  reference = {JHelioviewer-Server},
+  NUMBER_OF_RESEARCHERS = {4},
+  BUDGET = {$9{.}000$ \euro}
+}
+
+@Project{P10-TIC-6548,
+  TITLE = {Codificación de Vídeo Escalable y su Streaming sobre Internet},
+  ENTITY = {Junta de Andalucía},
+  PROGRAM = {Proyectos motrices},
+  START = {2011/7/06},
+  FINISH = {2015/7/05},
+  HEAD = {Vicente González Ruiz},
+  CODE = {P10-TIC-6548},
+  BUDGET = {$67{.}425$ \euro},
+  NUMBER_OF_RESEARCHERS = {13},
+  GROUP = {no}
+}
+
+@COMPANY{IPTV_solutions,
+  NAME = {\href{http://www.infocif.es/ficha-empresa/iptv-solutions-sl}{IPTV Solutions SL}},
+  CIF = {B04621157},
+  ADDRESS = {C/ Magistral Dominguez 11, 04003, Almería, España},
+  CEO = {José Francisco Bermúdez Pérez},
+  STOCK = {$213.000,00$ \euro},
+  START = {2007/12/21},
+  FINISH = {2011/09/26}
+}
+
+@PFC{TransProgJPEG2000,
+  TITLE = {Transmisión Progresiva de Imágenes JPEG2000},
+  modalidad = {Trabajo monográfico},
+  descripcion = {Sistema cliente-servidor basado en HTTP para la manipulación
+    interactiva de imágenes JPEG2000},
+  titulacion = {Ing. en Informática},
+  alumno = {Juan Pablo García Ortíz},
+  calificacion = {M. Honor},
+  FECHA = {2003},
+  DIRECTORES = {Vicente González Ruiz}
+}
+
+@PFC{VisualizadorRemoto,
+  TITLE = {Visualizador de Imágenes Remotas},
+  modalidad = {Trabajo técnico},
+  descripcion = {Aplicación cliente-servidor que permite transmitir imágenes progresivamente a través de Internet},
+  titulacion = {Ing. Técnica en Informática de Sistemas},
+  alumno = {Juan Pablo García Ortíz},
+  calificacion = {Sobresaliente},
+  FECHA = {2001},
+  DIRECTORES = {Vicente González Ruiz y José Jesús Fernández Rodríguez},
+  observaciones = {Premio extraordinario de proyecto fin de carrera de Ing. Técnica en Informática de Sistemas en el curso 2000/2001}
+}
