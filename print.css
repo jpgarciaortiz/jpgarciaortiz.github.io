@@ -1,0 +1,62 @@
+/*a[href]:after {
+    content: " (" attr(href) ")";
+}*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #000;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+    margin-top: 40px;
+}
+
+/*
+#toc {
+    display: none;
+}*/
+
+.h_a {
+    color: #000;
+    font-size: 18pt; 
+}
+
+table,
+blockquote,
+pre,
+code,
+figure,
+li,
+hr,
+ul,
+ol,
+a,
+tr {
+    page-break-inside: avoid;
+}
+
+.page {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.page-break,
+.page-break-before {
+    page-break-before: always;
+}
+
+.page-break-after {
+    page-break-after: always;
+}
+
+.no-print {
+    display: none;
+}
+
+header, footer, aside, nav, form, iframe, .menu, .hero, .adslot {
+    display: none;
+}

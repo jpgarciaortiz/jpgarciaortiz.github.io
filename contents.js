@@ -22,7 +22,7 @@ window.onload = function () {
                 toc += "<li><a href=\"#" + anchor + "\">" + titleText
                     + "</a></li>";
 
-                return "<h" + openLevel + "><a name=\"" + anchor + "\">"
+                return "<h" + openLevel + "><a name=\"" + anchor + "\" class=\"h_a\">"
                     + titleText + "</a></h" + closeLevel + ">";
             }
         );

@@ -10,9 +10,23 @@ layout: page
     
     <script type="text/javascript" src="bibtex_js.js"></script>    
     <script type="text/javascript" src="contents.js"></script>
+
+    <link rel="stylesheet" media="print" href="print.css">
+
   </head> 
   <body>
+    <style scoped>
+      @media screen { #careto{display:none;} }
+      @media print { #careto{} #careto_pic{ width:100px; height:145px;} }
+    </style>
+    <div id="careto">
+      {%- include careto.html -%}
+    </div>
 
+    <style scoped>
+      @media screen { #toc{} }
+      @media print { #toc{display:none;} }      
+    </style>
     <div id="toc">
       <h2>Table of contents</h2>
     </div>
@@ -141,8 +155,10 @@ layout: page
       <h2>Transference projects</h2>
       <div class="bibtex_display" BIBTEXTYPEKEY="PROJECT"></div>
 
+      <!--
       <h2>Contracts</h2>
-      <div class="bibtex_display" BIBTEXTYPEKEY="CONTRACT"></div>
+      <div class="bibtex_display" BIBTEXTYPEKEY="CONTRACT"></div>      
+      -->
 
       <h2>Phd Thesis</h2>
       <div class="bibtex_display" BIBTEXTYPEKEY="PHDTHESIS"></div>
