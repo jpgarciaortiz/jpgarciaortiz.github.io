@@ -17,7 +17,7 @@ layout: page
   <body>
     <style scoped>
       @media screen { #careto{display:none;} }
-      @media print { #careto{} #careto_pic{ width:100px; height:145px;} }
+      @media print { #careto{} #careto_pic{ width:140px; height:140px;} }
     </style>
     <div id="careto">
       {%- include careto.html -%}
@@ -88,6 +88,17 @@ layout: page
             Evidence: <a class="evidenceurl"><span class="evidence"></span></a><br>
           </div>
         </span>
+        <span class="if BIBTEXTYPEKEY==MENTORING">
+          <a class="url"><span class="title"></span></a>.
+          <div style="margin-left: 30px;">
+            Founding entity: <span class="entity"></span><br>
+            Program: <a class="programurl"><span class="program"></span></a><br>
+            From <span class="start"></span> to <span class="finish"></span><br>
+            Author: <span class="head"></span><br>
+            Mentors: <span class="mentor"></span><br>
+            Evidence: <a class="evidenceurl"><span class="evidence"></span></a><br>
+          </div>
+        </span>
         <span class="if BIBTEXTYPEKEY==INBOOK">
           <span class="if author">
             <span class="author">
@@ -149,8 +160,8 @@ layout: page
       <h2>Book chapters</h2>
       <div class="bibtex_display" BIBTEXTYPEKEY="INBOOK"></div>
 
-      <h2>Research projects</h2>
-      <div class="bibtex_display" BIBTEXTYPEKEY="PROJECT"></div>
+      <h2>Open source projects</h2>
+      <div class="bibtex_display" BIBTEXTYPEKEY="MENTORING"></div>
 
       <h2>Transference projects</h2>
       <div class="bibtex_display" BIBTEXTYPEKEY="PROJECT"></div>
